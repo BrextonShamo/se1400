@@ -1,3 +1,6 @@
+body {
+    margin:0
+}
 a {
             color:pink;
             text-decoration: none;
@@ -16,6 +19,7 @@ a {
             text-shadow: 5px 5px 8px black;
             text-transform: uppercase;
             text-align: center;
+            margin:0
         }  
         p {
             font-size: 1rem;
@@ -31,4 +35,23 @@ a {
         }
         #greentext {
             color: green;
+        }
+        nav {
+            border: 2px solid #902222;
+            border-radius: 20px;
+        }
+        nav ul li {
+            display:inline-block;
+            padding:10px 20px;
+            background-color: grey;
+        }
+        .myimage{
+            width:300px;
+        }
+        .backgroundimage {
+            height:300px;
+            background-image: url('images/pexels-didsss-2508565.jpg');
+            background-size:cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
         }
