@@ -26,3 +26,16 @@ h2 {
     color: #424242;
     font-family: 'Georgia', serif
 }
+dt {
+    color: #003058;
+    font-weight: bold;
+}
+.ut {
+    color: #ba1c21;
+    font-weight: bold;
+}
+footer {
+    font-size: .7rem;
+    font-style: italic;
+    text-align: center;
+}
