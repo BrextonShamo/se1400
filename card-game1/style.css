@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%
+}
 body {
     margin:0
 }
@@ -9,6 +15,7 @@ a {
             background-color:#902222;
             color:white;
             text-decoration: underline;
+            
         }
         h1 {
             font-size: 50px;
@@ -19,7 +26,7 @@ a {
             text-shadow: 5px 5px 8px black;
             text-transform: uppercase;
             text-align: center;
-            margin:0
+            margin:0;
         }  
         p {
             font-size: 1rem;
@@ -39,19 +46,44 @@ a {
         nav {
             border: 2px solid #902222;
             border-radius: 20px;
+            position:sticky;
+            top: 0px;
+            z-index: 1;
         }
         nav ul li {
             display:inline-block;
             padding:10px 20px;
             background-color: grey;
         }
+        nav ul li a:hover {
+            background-color: #F2BF80;
+            color: black;
+        }
         .myimage{
-            width:300px;
+            width:200px;
+            float: left;
+            padding: 10px;
+        }
+        .clear {
+            clear: both;
         }
         .backgroundimage {
             height:300px;
             background-image: url('images/pexels-didsss-2508565.jpg');
             background-size: cover;
-            background-position: 50% 50%;
+            background-position: 50% 95%;
             background-repeat: no-repeat;
+        }
+        .column {
+            float: left;
+            width: 25%;
+        }
+        .absolute {
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: -1;
+        }
+        .relative {
+            position: relative;
         }

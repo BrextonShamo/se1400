@@ -1,0 +1,12 @@
+header {
+    display: none;
+}
+nav {
+    display: none;
+}
+.backgroundimage {
+    display: none;
+}
+header, nav, .backgroundimage {
+    display: none;
+}
