@@ -25,7 +25,7 @@ header p {
 }
 nav {
     background-color: #FFF2CC;
-    height: 80px;
+    height: auto;
     margin: 0;
     padding: 10px;
     font-family: "Jacques Francois", serif;
@@ -36,9 +36,10 @@ nav {
 nav ul {
     list-style: none;
     text-align: center;
+    display: flex;
+    flex-flow:row;
 }
 nav ul li {
-    display: inline-block;
     padding: 0px 30px;
     margin: 0;
 }
@@ -164,8 +165,15 @@ footer {
     grid-column: 2 / -2;
 }
 @media only screen and (max-width: 992px) {
-
+    body {
+        background-color: red;
+    }
+    nav {
+        flex-direction: column;
+    }
 }
 @media only screen and (max-width: 768px) {
-    
+    body {
+        background-color: green;
+    }
 }
