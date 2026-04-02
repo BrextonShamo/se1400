@@ -37,7 +37,7 @@ nav ul {
     list-style: none;
     text-align: center;
     display: flex;
-    flex-flow:row;
+    justify-content: center;
 }
 nav ul li {
     padding: 0px 30px;
@@ -165,15 +165,55 @@ footer {
     grid-column: 2 / -2;
 }
 @media only screen and (max-width: 992px) {
-    body {
-        background-color: red;
-    }
-    nav {
-        flex-direction: column;
+    nav ul li{
+        font-size: 22px;
     }
 }
 @media only screen and (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 20px;
+    }
+    header p {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    nav ul li {
+        padding: 10px;
+        font-size: 20px;
+    }
+    #info-box1 p, #info-box2 p, #info-box3 p {
+        font-size: 12px;
+    }
+    #info-button {
+        height: 35px;
+        width: 140px;
+    }
+    #info-button p {
+        font-size: 20px;
+        padding: 4px 15px 0px 15px;
+    }
+}
+@media only screen and (max-width: 600px) {
     body {
         background-color: green;
+    }
+    #hero {
+        height: 600px;
+    }
+    .image-wrapper {
+        margin: auto;
+        padding: 0px;
+    }
+    .image-wrapper img {
+        height: 600px;
+        width: auto;
+    }
+    #button {
+        display: none;
     }
 }
