@@ -27,7 +27,7 @@ a {
             text-transform: uppercase;
             text-align: center;
             margin:0;
-        }  
+        }
         p {
             font-size: 1rem;
             font-style: italic;
@@ -55,9 +55,19 @@ a {
             padding:10px 20px;
             background-color: grey;
         }
+        nav ul li ul {
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            display: none
+        }
+        nav ul li:hover ul {
+            display: flex;
+        }
         nav ul li a:hover {
             background-color: #F2BF80;
             color: black;
+
         }
         .myimage{
             width:200px;
