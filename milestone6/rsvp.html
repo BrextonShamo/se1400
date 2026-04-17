@@ -38,11 +38,23 @@
             <main>
                 <h2>RSVP</h2>
                 <form method="get">
-                    <label for="name"></label>
+                    <label for="name">Name:</label>
                     <input type="text" id="name" placeholder="Enter Name Here">
-
-                    <label for="attending">Will be attending</label>
-                    <input type="radio" id="attending" name="y/n_attending" value="will be">
+                    <div id="attending">
+                        <h3>Attending?</h3>
+                        <input type="radio" id="attending" name="y/n_attending" value="will be">
+                        <label for="attending">Will be attending</label>
+                        <br>
+                        <input type="radio" id="attending" name="y/n attending" value="will not be">
+                        <label for="attending">Will not be attending</label><br>
+                        <h3>Dinner</h3>
+                        <input type="radio" id="dinner" name="dinner-type" value="chicken dinner">
+                        <label for="dinner">Chicken dinner</label><br>
+                        <input type="radio" id="dinner" name="dinner-type" value="steak dinner">
+                        <label for="dinner">Steak dinner</label><br>
+                        <input type="radio" id="dinner" name="dinner-type" value="pork dinner">
+                        <label for="dinner">Pork dinner</label>
+                    </div>
                 </form>
             </main>
         </div>
