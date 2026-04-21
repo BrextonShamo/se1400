@@ -37,27 +37,91 @@
             </nav>
             <main>
                 <h2>RSVP</h2>
+                <p>
+                    If you’re traveling to celebrate with us,
+                    there are several comfortable places to stay nearby in and around Bountiful.
+                    You’ll find a variety of hotel options just a short drive from the venue,
+                    as well as vacation rentals for those who prefer a more home-like stay.
+                    We recommend booking early, as availability may become limited closer to the wedding date.<br>
+                    <br>
+
+                    While you’re in the area, we encourage you to take some time to enjoy all that northern Utah has to offer.
+                    Bountiful is known for its beautiful mountain views, peaceful atmosphere, and easy access to outdoor activities.
+                    If you have extra time, you might enjoy exploring nearby hiking trails,
+                    visiting local parks, or taking a short trip into Salt Lake City to experience shopping, dining, and local attractions.<br>
+                    <br>
+                    When it comes to dining and entertainment, the Bountiful and Salt Lake City area has plenty to offer.
+                    From cozy local restaurants serving comfort food to upscale dining experiences perfect for a pre-wedding celebration,
+                    you'll find no shortage of great options nearby.
+                    If you're looking for things to do with family or friends before or after the ceremony,
+                    the area is home to beautiful parks, historic sites,
+                    and cultural attractions that are well worth exploring.
+                    Temple Square in Salt Lake City is a short drive away and is one of the most visited landmarks in the state,
+                    offering stunning architecture and beautifully maintained gardens that are lovely any time of year. 
+                    <br><br>
+                    We’re so grateful you’re making the trip to be part of our special day.
+                    Whether you’re staying for a quick visit or turning it into a longer getaway,
+                    we hope you’ll have a relaxing and memorable time while you’re here.
+                    If you have any questions about travel or accommodations, feel free to reach out—we’re happy to help however we can.<br>
+                    <br>
+
+                </p>
                 <form method="get">
+                    <h3>Information</h3>
                     <label for="name">Name:</label>
                     <input type="text" id="name" placeholder="Enter Name Here">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" placeholder="(123) 456-7890">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="123 N 456 W">
                     <div id="attending">
-                        <h3>Attending?</h3>
-                        <input type="radio" id="attending" name="y/n_attending" value="will be">
-                        <label for="attending">Will be attending</label>
-                        <br>
-                        <input type="radio" id="attending" name="y/n attending" value="will not be">
-                        <label for="attending">Will not be attending</label><br>
-                        <h3>Dinner</h3>
-                        <input type="radio" id="dinner" name="dinner-type" value="chicken dinner">
-                        <label for="dinner">Chicken dinner</label><br>
-                        <input type="radio" id="dinner" name="dinner-type" value="steak dinner">
-                        <label for="dinner">Steak dinner</label><br>
-                        <input type="radio" id="dinner" name="dinner-type" value="pork dinner">
-                        <label for="dinner">Pork dinner</label>
+                    <h3>Attending?</h3>
+                    <input type="radio" id="y_attending" name="y/n_attending" value="will be">
+                    <label for="attending">Will be attending</label>
+                    <br>
+                    <input type="radio" id="n_attending" name="y/n_attending" value="will not be">
+                    <label for="attending">Will not be attending</label><br>
+                    
+                    <h3>Dinner</h3>
+                    <input type="radio" id="chicken_dinner" name="dinner-type" value="chicken dinner">
+                    <label for="dinner">Chicken dinner</label><br>
+                    <input type="radio" id="steak_dinner" name="dinner-type" value="steak dinner">
+                    <label for="dinner">Steak dinner</label><br>
+                    <input type="radio" id="pork_dinner" name="dinner-type" value="pork dinner">
+                    <label for="dinner">Pork dinner</label>
+                    <br>
+                    <br>
+                    <input type="submit" id="rsvp_submit">
                     </div>
                 </form>
             </main>
         </div>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const yesRadio = document.getElementById("y_attending");
+            const noRadio = document.getElementById("n_attending");
+            const container = document.getElementById("attending");
+
+            const inputs = container.querySelectorAll("input");
+
+            function toggleForm() {
+                if (noRadio.checked) {
+                    inputs.forEach(input => {
+                       if (input !== noRadio && input.id !== "rsvp_submit") {
+                            input.disabled = true;
+                        }
+                    });
+                } else {
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                    });
+                }
+            }
+
+            yesRadio.addEventListener("change", toggleForm);
+            noRadio.addEventListener("change", toggleForm);
+        });
+        </script>
     </body>
 </html>
     
